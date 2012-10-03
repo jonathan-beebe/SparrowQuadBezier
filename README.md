@@ -60,3 +60,5 @@ bezTween.loop = SPLoopTypeReverse;
 
 [[SPStage mainStage].juggler addObject:bezTween];
 ```
+
+If you have any questions feel free to ask me on [twitter: @bejonbee](https://twitter.com/bejonbee)
