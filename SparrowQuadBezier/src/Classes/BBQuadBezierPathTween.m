@@ -59,6 +59,7 @@ typedef float (*FnPtrTransition) (id, SEL, float);
         self.tCurrent = 0.0;
         self.tEnd = 1.0;
         self.updateAngle = YES;
+        self.angleOffset = 0;
 
         // create function pointer for transition
         NSString *transMethod = [transition stringByAppendingString:TRANS_SUFFIX];
@@ -146,8 +147,8 @@ typedef float (*FnPtrTransition) (id, SEL, float);
     [self.target setValue:[NSNumber numberWithFloat:my] forKey:@"y"];
 
     if(self.updateAngle == YES) {
-        float trad = [self.path trad:self.tCurrent];
-        [self.target setValue:[NSNumber numberWithFloat:trad] forKey:@"rotation"];
+        float trad = [self.path tmrad:self.tCurrent];
+        [self.target setValue:[NSNumber numberWithFloat:trad + self.angleOffset] forKey:@"rotation"];
     }
 
     if ([self hasEventListenerForType:SP_EVENT_TYPE_TWEEN_UPDATED])
