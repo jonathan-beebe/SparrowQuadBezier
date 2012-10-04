@@ -145,6 +145,30 @@
     return [seg trad:newT];
 }
 
+- (float) tmx:(float)u
+{
+    int segIndex = [self getSegmentIndexAtTime:u];
+    float newT = [self scaleTime:u forSegment:segIndex];
+    BBQuadBezierSegment *seg = [self.segments objectAtIndex:segIndex];
+    return [seg mx:newT];
+}
+
+- (float) tmy:(float)u
+{
+    int segIndex = [self getSegmentIndexAtTime:u];
+    float newT = [self scaleTime:u forSegment:segIndex];
+    BBQuadBezierSegment *seg = [self.segments objectAtIndex:segIndex];
+    return [seg my:newT];
+}
+
+- (float) tmrad:(float)u
+{
+    int segIndex = [self getSegmentIndexAtTime:u];
+    float newT = [self scaleTime:u forSegment:segIndex];
+    BBQuadBezierSegment *seg = [self.segments objectAtIndex:segIndex];
+    return [seg tmrad:newT];
+}
+
 /**
  Scale a number to fit within a range, e.g. given a range from 0.3 - 0.7 and a scale of 0 - 1,
  scale all values between 0.3 and 0.7, where 0.3 -> 0, 0.7 -> 1.

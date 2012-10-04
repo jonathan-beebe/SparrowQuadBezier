@@ -118,7 +118,22 @@
 
 - (float) trad:(float)t
 {
-    return -atan2f([self tx:t], [self ty:t]);
+    return atan2f([self tx:t], -[self ty:t]);
+}
+
+- (float) tmx:(float)u
+{
+    return [self bezierTangent:[self map:u] a:self.a.x b:self.b.x c:self.c.x d:self.d.x];
+}
+
+- (float) tmy:(float)u
+{
+    return [self bezierTangent:[self map:u] a:self.a.y b:self.b.y c:self.c.y d:self.d.y];
+}
+
+- (float) tmrad:(float)u
+{
+    return atan2f([self tmx:u], -[self tmy:u]);
 }
 
 /**

@@ -44,11 +44,12 @@
 @property (nonatomic, readonly) double currentTime;
 
 /// The delay before the tween is started.
-@property (nonatomic, assign)   double delay;
+@property (nonatomic, assign) double delay;
 
 /// The type of loop. (Default: SPLoopTypeNone)
-@property (nonatomic, assign)   SPLoopType loop;
+@property (nonatomic, assign) SPLoopType loop;
 
 @property (nonatomic, assign) BOOL updateAngle;
+@property (nonatomic, assign) float angleOffset;
 
 @end

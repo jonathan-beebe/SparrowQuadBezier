@@ -37,4 +37,8 @@
 - (float) ty:(float)t;
 - (float) trad:(float)t;
 
+- (float) tmx:(float)u;
+- (float) tmy:(float)u;
+- (float) tmrad:(float)u;
+
 @end

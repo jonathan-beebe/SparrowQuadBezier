@@ -97,10 +97,9 @@
 
     SPImage *img = [SPImage imageWithContentsOfFile:@"car-top-view.png"];
 
-    img.x = img.height / 2;
-    img.y = -img.width * 2/3;
+    img.x = -img.width / 2;
+    img.y = -img.height / 2;
 
-    img.rotation = SP_D2R(90);
     SPSprite *sprite = [[SPSprite alloc] init];
     [sprite addChild:img];
     dot = sprite;
@@ -111,6 +110,7 @@
     
     bezTween = [BBQuadBezierPathTween tweenWithTarget:dot path:path time:5.0 transition:SP_TRANSITION_EASE_IN_OUT];
     bezTween.loop = SPLoopTypeReverse;
+    bezTween.angleOffset = SP_D2R(-90);
 
     [bezTween addEventListener:@selector(onTweenStarted:) atObject:self forType:SP_EVENT_TYPE_TWEEN_STARTED];
 //    [bezTween addEventListener:@selector(onTweenUpdate:) atObject:self forType:SP_EVENT_TYPE_TWEEN_UPDATED];
