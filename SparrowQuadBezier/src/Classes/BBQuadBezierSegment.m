@@ -31,6 +31,11 @@
 
 - (id) initWithA:(SPPoint*)a b:(SPPoint*)b c:(SPPoint*)c d:(SPPoint*)d
 {
+    return [self initWithA:a b:b c:c d:d resolution:200];
+}
+
+- (id) initWithA:(SPPoint*)a b:(SPPoint*)b c:(SPPoint*)c d:(SPPoint*)d resolution:(int)resolution
+{
     self = [super init];
     if (self) {
         self.a = a;
@@ -38,7 +43,7 @@
         self.c = c;
         self.d = d;
 
-        self.len = 500;
+        self.len = resolution;
 
         self.cache = [[NSCache alloc] init];
 

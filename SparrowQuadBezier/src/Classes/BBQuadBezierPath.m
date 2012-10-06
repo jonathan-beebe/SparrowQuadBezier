@@ -31,6 +31,7 @@
     self = [super init];
     if (self) {
         self.segments = [NSMutableArray array];
+        self.resolution = 200;
     }
     return self;
 }
@@ -59,7 +60,7 @@
 
 - (void) addSegmentWithA:(SPPoint *)a b:(SPPoint *)b c:(SPPoint *)c d:(SPPoint *)d
 {
-    BBQuadBezierSegment *seg = [[BBQuadBezierSegment alloc] initWithA:a b:b c:c d:d];
+    BBQuadBezierSegment *seg = [[BBQuadBezierSegment alloc] initWithA:a b:b c:c d:d resolution:self.resolution];
 
     NSMutableArray *array = [NSMutableArray arrayWithArray:self.segments];
     [array addObject:seg];

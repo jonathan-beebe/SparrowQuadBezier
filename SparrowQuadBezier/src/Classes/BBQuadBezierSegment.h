@@ -27,6 +27,9 @@
 
 - (id) initWithA:(SPPoint*)a b:(SPPoint*)b c:(SPPoint*)c d:(SPPoint*)d;
 
+/// Init with a custom resolution for the arc-length estimation.
+- (id) initWithA:(SPPoint*)a b:(SPPoint*)b c:(SPPoint*)c d:(SPPoint*)d resolution:(int)resolution;
+
 - (float) map:(float)u;
 - (float) mx:(float)u;
 - (float) my:(float)u;

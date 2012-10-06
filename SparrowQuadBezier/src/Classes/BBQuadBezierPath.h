@@ -18,6 +18,10 @@
 @property (nonatomic, readonly) int segmentCount;
 @property (nonatomic, readonly) float length;
 
+/// The resolution of a segment's arc-length estimation.
+/// If you notice your tween skipping or jumping, increase the resolution a bit.
+@property (nonatomic, assign) int resolution;
+
 - (void) addSegmentWithA:(SPPoint*)a b:(SPPoint*)b c:(SPPoint*)c d:(SPPoint*)d;
 - (UIBezierPath*)toUIBezierPath;
 - (BBQuadBezierSegment*)segmentAtIndex:(int)index;

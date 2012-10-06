@@ -59,6 +59,12 @@
 
     BBQuadBezierPath *path = [[BBQuadBezierPath alloc] init];
 
+    // You'll probably be able to get away with a much lower resolution, such as the default of 200.
+    // This demonstrates that even very high resolutions don't have much of a performance hit, at least in
+    // this small demo app. If you notice your tween skipping or jumping, increase the resolution a bit.
+    
+    path.resolution = 1000;
+
     [path addSegmentWithA:[SPPoint pointWithX:0.0 y:0.0]
                         b:[SPPoint pointWithX:0.0 y:height / 4]
                         c:[SPPoint pointWithX:width / 4 y:height / 4]
