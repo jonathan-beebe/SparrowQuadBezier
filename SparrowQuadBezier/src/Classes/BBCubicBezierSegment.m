@@ -1,5 +1,5 @@
 //
-//  BBQuadBezierSegment.m
+//  BBCubicBezierSegment.m
 //  Bezier
 //
 //  Created by Jon Beebe on 12/10/2.
@@ -9,13 +9,13 @@
 //  it under the terms of the Simplified BSD License.
 //
 
-#import "BBQuadBezierSegment.h"
+#import "BBCubicBezierSegment.h"
 #import "SPPoint+toString.h"
 #import "NSArray+BinarySearch.h"
 
 #pragma mark - Interface
 
-@interface BBQuadBezierSegment ()
+@interface BBCubicBezierSegment ()
 
 @property (nonatomic, strong) NSCache *cache;
 
@@ -27,7 +27,7 @@
 
 #pragma mark - Implementation
 
-@implementation BBQuadBezierSegment
+@implementation BBCubicBezierSegment
 
 - (id) initWithA:(SPPoint*)a b:(SPPoint*)b c:(SPPoint*)c d:(SPPoint*)d
 {

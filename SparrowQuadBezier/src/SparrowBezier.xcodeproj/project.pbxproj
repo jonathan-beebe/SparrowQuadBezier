@@ -12,15 +12,15 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		515E0545161A696B008AE391 /* BBQuadBezierPath+DebugDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = 515E0544161A696B008AE391 /* BBQuadBezierPath+DebugDraw.m */; };
-		519131DF161BC4A70039AF1B /* BBQuadBezierPathTween.m in Sources */ = {isa = PBXBuildFile; fileRef = 519131DE161BC4A70039AF1B /* BBQuadBezierPathTween.m */; };
+		515E0545161A696B008AE391 /* BBCubicBezierPath+DebugDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = 515E0544161A696B008AE391 /* BBCubicBezierPath+DebugDraw.m */; };
+		519131DF161BC4A70039AF1B /* BBCubicBezierPathTween.m in Sources */ = {isa = PBXBuildFile; fileRef = 519131DE161BC4A70039AF1B /* BBCubicBezierPathTween.m */; };
 		51AF705C161C8A28007B4BEA /* car-top-view.png in Resources */ = {isa = PBXBuildFile; fileRef = 51AF705B161C8A28007B4BEA /* car-top-view.png */; };
 		51AF705E161C8A30007B4BEA /* car-top-view@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51AF705D161C8A30007B4BEA /* car-top-view@2x.png */; };
 		51BEE9C21618E37200F26A51 /* NSArray+BinarySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BEE9C11618E37200F26A51 /* NSArray+BinarySearch.m */; };
 		51E6C6DF1617787E00590312 /* NSObject+BlockObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E6C6DC1617787E00590312 /* NSObject+BlockObservation.m */; };
 		51E793D5161BEB950075E15F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51E793D4161BEB950075E15F /* Default-568h@2x.png */; };
-		51F5B8FC1618C71300C68212 /* BBQuadBezierSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F5B8FB1618C71300C68212 /* BBQuadBezierSegment.m */; };
-		51F5B8FF1618CED700C68212 /* BBQuadBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F5B8FE1618CED700C68212 /* BBQuadBezierPath.m */; };
+		51F5B8FC1618C71300C68212 /* BBCubicBezierSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F5B8FB1618C71300C68212 /* BBCubicBezierSegment.m */; };
+		51F5B8FF1618CED700C68212 /* BBCubicBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F5B8FE1618CED700C68212 /* BBCubicBezierPath.m */; };
 		51F5B9051618D17700C68212 /* SPPoint+CGPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F5B9041618D17700C68212 /* SPPoint+CGPoint.m */; };
 		51F5B9081618D30400C68212 /* SPPoint+toString.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F5B9071618D30400C68212 /* SPPoint+toString.m */; };
 		DE1FBDFD14F831A300E86642 /* SPResizeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1FBDFC14F831A300E86642 /* SPResizeEvent.m */; };
@@ -74,15 +74,15 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* SparrowQuadBezier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparrowQuadBezier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* SparrowBezier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparrowBezier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* App-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "App-Prefix.pch"; sourceTree = "<group>"; };
-		515E0543161A696B008AE391 /* BBQuadBezierPath+DebugDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BBQuadBezierPath+DebugDraw.h"; sourceTree = "<group>"; };
-		515E0544161A696B008AE391 /* BBQuadBezierPath+DebugDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BBQuadBezierPath+DebugDraw.m"; sourceTree = "<group>"; };
-		519131DD161BC4A70039AF1B /* BBQuadBezierPathTween.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBQuadBezierPathTween.h; sourceTree = "<group>"; };
-		519131DE161BC4A70039AF1B /* BBQuadBezierPathTween.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBQuadBezierPathTween.m; sourceTree = "<group>"; };
+		515E0543161A696B008AE391 /* BBCubicBezierPath+DebugDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BBCubicBezierPath+DebugDraw.h"; sourceTree = "<group>"; };
+		515E0544161A696B008AE391 /* BBCubicBezierPath+DebugDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BBCubicBezierPath+DebugDraw.m"; sourceTree = "<group>"; };
+		519131DD161BC4A70039AF1B /* BBCubicBezierPathTween.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCubicBezierPathTween.h; sourceTree = "<group>"; };
+		519131DE161BC4A70039AF1B /* BBCubicBezierPathTween.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCubicBezierPathTween.m; sourceTree = "<group>"; };
 		51AF705B161C8A28007B4BEA /* car-top-view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "car-top-view.png"; sourceTree = "<group>"; };
 		51AF705D161C8A30007B4BEA /* car-top-view@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "car-top-view@2x.png"; sourceTree = "<group>"; };
 		51BEE9C01618E37200F26A51 /* NSArray+BinarySearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BinarySearch.h"; sourceTree = "<group>"; };
@@ -90,10 +90,10 @@
 		51E6C6DB1617787E00590312 /* NSObject+BlockObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BlockObservation.h"; sourceTree = "<group>"; };
 		51E6C6DC1617787E00590312 /* NSObject+BlockObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BlockObservation.m"; sourceTree = "<group>"; };
 		51E793D4161BEB950075E15F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		51F5B8FA1618C71300C68212 /* BBQuadBezierSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBQuadBezierSegment.h; sourceTree = "<group>"; };
-		51F5B8FB1618C71300C68212 /* BBQuadBezierSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBQuadBezierSegment.m; sourceTree = "<group>"; };
-		51F5B8FD1618CED700C68212 /* BBQuadBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBQuadBezierPath.h; sourceTree = "<group>"; };
-		51F5B8FE1618CED700C68212 /* BBQuadBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBQuadBezierPath.m; sourceTree = "<group>"; };
+		51F5B8FA1618C71300C68212 /* BBCubicBezierSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCubicBezierSegment.h; sourceTree = "<group>"; };
+		51F5B8FB1618C71300C68212 /* BBCubicBezierSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCubicBezierSegment.m; sourceTree = "<group>"; };
+		51F5B8FD1618CED700C68212 /* BBCubicBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBCubicBezierPath.h; sourceTree = "<group>"; };
+		51F5B8FE1618CED700C68212 /* BBCubicBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBCubicBezierPath.m; sourceTree = "<group>"; };
 		51F5B9031618D17700C68212 /* SPPoint+CGPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPPoint+CGPoint.h"; sourceTree = "<group>"; };
 		51F5B9041618D17700C68212 /* SPPoint+CGPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPPoint+CGPoint.m"; sourceTree = "<group>"; };
 		51F5B9061618D30400C68212 /* SPPoint+toString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPPoint+toString.h"; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* SparrowQuadBezier.app */,
+				1D6058910D05DD3D006BFB54 /* SparrowBezier.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,12 +221,12 @@
 		519131DC161BC4580039AF1B /* Bezier */ = {
 			isa = PBXGroup;
 			children = (
-				51F5B8FA1618C71300C68212 /* BBQuadBezierSegment.h */,
-				51F5B8FB1618C71300C68212 /* BBQuadBezierSegment.m */,
-				51F5B8FD1618CED700C68212 /* BBQuadBezierPath.h */,
-				51F5B8FE1618CED700C68212 /* BBQuadBezierPath.m */,
-				519131DD161BC4A70039AF1B /* BBQuadBezierPathTween.h */,
-				519131DE161BC4A70039AF1B /* BBQuadBezierPathTween.m */,
+				51F5B8FA1618C71300C68212 /* BBCubicBezierSegment.h */,
+				51F5B8FB1618C71300C68212 /* BBCubicBezierSegment.m */,
+				51F5B8FD1618CED700C68212 /* BBCubicBezierPath.h */,
+				51F5B8FE1618CED700C68212 /* BBCubicBezierPath.m */,
+				519131DD161BC4A70039AF1B /* BBCubicBezierPathTween.h */,
+				519131DE161BC4A70039AF1B /* BBCubicBezierPathTween.m */,
 			);
 			name = Bezier;
 			sourceTree = "<group>";
@@ -242,8 +242,8 @@
 				51F5B9071618D30400C68212 /* SPPoint+toString.m */,
 				51BEE9C01618E37200F26A51 /* NSArray+BinarySearch.h */,
 				51BEE9C11618E37200F26A51 /* NSArray+BinarySearch.m */,
-				515E0543161A696B008AE391 /* BBQuadBezierPath+DebugDraw.h */,
-				515E0544161A696B008AE391 /* BBQuadBezierPath+DebugDraw.m */,
+				515E0543161A696B008AE391 /* BBCubicBezierPath+DebugDraw.h */,
+				515E0544161A696B008AE391 /* BBCubicBezierPath+DebugDraw.m */,
 			);
 			name = categories;
 			sourceTree = "<group>";
@@ -318,9 +318,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* SparrowQuadBezier */ = {
+		1D6058900D05DD3D006BFB54 /* SparrowBezier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SparrowQuadBezier" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SparrowBezier" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -331,9 +331,9 @@
 			dependencies = (
 				DE4A3DB810FFB0F500FDA492 /* PBXTargetDependency */,
 			);
-			name = SparrowQuadBezier;
+			name = SparrowBezier;
 			productName = AppScaffold;
-			productReference = 1D6058910D05DD3D006BFB54 /* SparrowQuadBezier.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* SparrowBezier.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -344,7 +344,7 @@
 			attributes = {
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SparrowQuadBezier" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SparrowBezier" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -364,7 +364,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* SparrowQuadBezier */,
+				1D6058900D05DD3D006BFB54 /* SparrowBezier */,
 			);
 		};
 /* End PBXProject section */
@@ -421,13 +421,13 @@
 				DECF454814F2E527006A4287 /* SPOverlayView.m in Sources */,
 				DE1FBDFD14F831A300E86642 /* SPResizeEvent.m in Sources */,
 				51E6C6DF1617787E00590312 /* NSObject+BlockObservation.m in Sources */,
-				51F5B8FC1618C71300C68212 /* BBQuadBezierSegment.m in Sources */,
-				51F5B8FF1618CED700C68212 /* BBQuadBezierPath.m in Sources */,
+				51F5B8FC1618C71300C68212 /* BBCubicBezierSegment.m in Sources */,
+				51F5B8FF1618CED700C68212 /* BBCubicBezierPath.m in Sources */,
 				51F5B9051618D17700C68212 /* SPPoint+CGPoint.m in Sources */,
 				51F5B9081618D30400C68212 /* SPPoint+toString.m in Sources */,
 				51BEE9C21618E37200F26A51 /* NSArray+BinarySearch.m in Sources */,
-				515E0545161A696B008AE391 /* BBQuadBezierPath+DebugDraw.m in Sources */,
-				519131DF161BC4A70039AF1B /* BBQuadBezierPathTween.m in Sources */,
+				515E0545161A696B008AE391 /* BBCubicBezierPath+DebugDraw.m in Sources */,
+				519131DF161BC4A70039AF1B /* BBCubicBezierPathTween.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +454,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "App-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				PRODUCT_NAME = SparrowQuadBezier;
+				PRODUCT_NAME = SparrowBezier;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -469,7 +469,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "App-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				PRODUCT_NAME = SparrowQuadBezier;
+				PRODUCT_NAME = SparrowBezier;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -525,7 +525,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SparrowQuadBezier" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SparrowBezier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -534,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SparrowQuadBezier" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SparrowBezier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

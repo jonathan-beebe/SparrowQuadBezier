@@ -6,9 +6,9 @@
 //
 //
 
-#import "BBQuadBezierPath+DebugDraw.h"
+#import "BBCubicBezierPath+DebugDraw.h"
 
-@implementation BBQuadBezierPath (DebugDraw)
+@implementation BBCubicBezierPath (DebugDraw)
 
 - (SPTexture*) drawPathWidth:(float)width height:(float)height
 {
@@ -23,7 +23,7 @@
 
                 CGContextSetLineWidth(context, 1.0);
 
-                for (BBQuadBezierSegment *seg in self.segments) {
+                for (BBCubicBezierSegment *seg in self.segments) {
 
                     // Draw the lines to the handles
                     [self drawLineInContext:context from:seg.a to:seg.b];

@@ -1,5 +1,5 @@
 //
-//  BBQuadBezierPathTween.m
+//  BBCubicBezierPathTween.m
 //  Bezier
 //
 //  Created by Jon Beebe on 12/10/2.
@@ -9,7 +9,7 @@
 //  it under the terms of the Simplified BSD License.
 //
 
-#import "BBQuadBezierPathTween.h"
+#import "BBCubicBezierPathTween.h"
 #import "SPTransitions.h"
 #import "SPTweenedProperty.h"
 
@@ -19,10 +19,10 @@ typedef float (*FnPtrTransition) (id, SEL, float);
 
 #pragma mark - Interface (private)
 
-@interface BBQuadBezierPathTween ()
+@interface BBCubicBezierPathTween ()
 
 @property (nonatomic, readwrite, strong) id target;
-@property (nonatomic, readwrite, strong) BBQuadBezierPath *path;
+@property (nonatomic, readwrite, strong) BBCubicBezierPath *path;
 @property (nonatomic, readwrite) double time;
 @property (nonatomic, readwrite) double currentTime;
 
@@ -38,13 +38,13 @@ typedef float (*FnPtrTransition) (id, SEL, float);
 
 #pragma mark - Implementation
 
-@implementation BBQuadBezierPathTween
+@implementation BBCubicBezierPathTween
 
 #pragma mark - Initialization
 
 /// Initializes a tween with a target, duration (in seconds) and a transition function.
 /// _Designated Initializer_.
-- (id)initWithTarget:(id)target path:(BBQuadBezierPath*)path time:(double)time transition:(NSString*)transition
+- (id)initWithTarget:(id)target path:(BBCubicBezierPath*)path time:(double)time transition:(NSString*)transition
 {
     if ((self = [super init]))
     {
@@ -74,21 +74,21 @@ typedef float (*FnPtrTransition) (id, SEL, float);
 
 /// Initializes a tween with a target, a time (in seconds) and a linear transition
 /// (`SP_TRANSITION_LINEAR`).
-- (id)initWithTarget:(id)target path:(BBQuadBezierPath*)path time:(double)time
+- (id)initWithTarget:(id)target path:(BBCubicBezierPath*)path time:(double)time
 {
     return [self initWithTarget:target path:path time:time transition:SP_TRANSITION_LINEAR];
 }
 
 /// Factory method.
-+ (BBQuadBezierPathTween *)tweenWithTarget:(id)target path:(BBQuadBezierPath*)path time:(double)time transition:(NSString *)transition
++ (BBCubicBezierPathTween *)tweenWithTarget:(id)target path:(BBCubicBezierPath*)path time:(double)time transition:(NSString *)transition
 {
-    return [[BBQuadBezierPathTween alloc] initWithTarget:target path:path time:time transition:transition];
+    return [[BBCubicBezierPathTween alloc] initWithTarget:target path:path time:time transition:transition];
 }
 
 /// Factory method.
-+ (BBQuadBezierPathTween *)tweenWithTarget:(id)target path:(BBQuadBezierPath*)path time:(double)time;
++ (BBCubicBezierPathTween *)tweenWithTarget:(id)target path:(BBCubicBezierPath*)path time:(double)time;
 {
-    return [[BBQuadBezierPathTween alloc] initWithTarget:target path:path time:time];
+    return [[BBCubicBezierPathTween alloc] initWithTarget:target path:path time:time];
 }
 
 #pragma mark - SPAnimatable

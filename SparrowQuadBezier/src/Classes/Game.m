@@ -4,21 +4,21 @@
 //
 
 #import "Game.h"
-#import "BBQuadBezierPath.h"
-#import "BBQuadBezierPath+DebugDraw.h"
+#import "BBCubicBezierPath.h"
+#import "BBCubicBezierPath+DebugDraw.h"
 
-#import "BBQuadBezierPathTween.h"
+#import "BBCubicBezierPathTween.h"
 
 #pragma mark - Interface (private)
 
 @interface Game () {
-    BBQuadBezierPath *activePath;
+    BBCubicBezierPath *activePath;
     float currentTime;
     float animationInterval;
     float animationTime;
     SPSprite *dot;
 
-    BBQuadBezierPathTween *bezTween;
+    BBCubicBezierPathTween *bezTween;
 }
 
 - (void)setup;
@@ -57,7 +57,7 @@
     float width = self.gameWidth;
     float height = self.gameHeight;
 
-    BBQuadBezierPath *path = [[BBQuadBezierPath alloc] init];
+    BBCubicBezierPath *path = [[BBCubicBezierPath alloc] init];
 
     // You'll probably be able to get away with a much lower resolution, such as the default of 200.
     // This demonstrates that even very high resolutions don't have much of a performance hit, at least in
@@ -114,7 +114,7 @@
     
     // Create the tween to animate along the quad bezier path
     
-    bezTween = [BBQuadBezierPathTween tweenWithTarget:dot path:path time:5.0 transition:SP_TRANSITION_EASE_IN_OUT];
+    bezTween = [BBCubicBezierPathTween tweenWithTarget:dot path:path time:5.0 transition:SP_TRANSITION_EASE_IN_OUT];
     bezTween.loop = SPLoopTypeReverse;
     bezTween.angleOffset = SP_D2R(-90);
 

@@ -6,9 +6,9 @@
 //
 //
 
-#import "BBQuadBezierPath.h"
+#import "BBCubicBezierPath.h"
 
-@interface BBQuadBezierPath (DebugDraw)
+@interface BBCubicBezierPath (DebugDraw)
 
 - (SPTexture*) drawPathWidth:(float)width height:(float)height;
 

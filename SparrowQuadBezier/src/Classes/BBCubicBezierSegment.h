@@ -1,5 +1,5 @@
 //
-//  BBQuadBezierSegment.h
+//  BBCubicBezierSegment.h
 //  Bezier
 //
 //  Defines a bezier curve. http://en.wikipedia.org/wiki/B%C3%A9zier_curve
@@ -18,7 +18,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BBQuadBezierSegment : NSObject
+@interface BBCubicBezierSegment : NSObject
 
 /// The beginning point for the curve. Sometimes referred to as P0.
 @property (nonatomic, strong) SPPoint *a;

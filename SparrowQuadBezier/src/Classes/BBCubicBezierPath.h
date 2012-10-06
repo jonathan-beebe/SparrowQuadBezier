@@ -1,5 +1,5 @@
 //
-//  BBQuadBezierPath.h
+//  BBCubicBezierPath.h
 //  Bezier
 //
 //  Created by Jon Beebe on 12/10/2.
@@ -10,9 +10,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BBQuadBezierSegment.h"
+#import "BBCubicBezierSegment.h"
 
-@interface BBQuadBezierPath : NSObject
+@interface BBCubicBezierPath : NSObject
 
 @property (nonatomic, strong, readonly) NSArray *segments;
 @property (nonatomic, readonly) int segmentCount;
@@ -24,7 +24,7 @@
 
 - (void) addSegmentWithA:(SPPoint*)a b:(SPPoint*)b c:(SPPoint*)c d:(SPPoint*)d;
 - (UIBezierPath*)toUIBezierPath;
-- (BBQuadBezierSegment*)segmentAtIndex:(int)index;
+- (BBCubicBezierSegment*)segmentAtIndex:(int)index;
 
 - (float) mx:(float)u;
 - (float) my:(float)u;

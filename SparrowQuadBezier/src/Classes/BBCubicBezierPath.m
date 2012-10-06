@@ -1,5 +1,5 @@
 //
-//  BBQuadBezierPath.m
+//  BBCubicBezierPath.m
 //  Bezier
 //
 //  Created by Jon Beebe on 12/10/2.
@@ -9,13 +9,13 @@
 //  it under the terms of the Simplified BSD License.
 //
 
-#import "BBQuadBezierPath.h"
+#import "BBCubicBezierPath.h"
 #import "SPPoint+CGPoint.h"
 #import "NSArray+BinarySearch.h"
 
 #pragma mark - Interface (private)
 
-@interface BBQuadBezierPath ()
+@interface BBCubicBezierPath ()
 
 @property (nonatomic, strong) NSArray *segments;
 @property (nonatomic, strong) NSArray *segmentRatios;
@@ -24,7 +24,7 @@
 
 #pragma mark - Implementation
 
-@implementation BBQuadBezierPath
+@implementation BBCubicBezierPath
 
 - (id)init
 {
@@ -44,13 +44,13 @@
 - (float) length
 {
     float l = 0;
-    for (BBQuadBezierSegment *seg in self.segments) {
+    for (BBCubicBezierSegment *seg in self.segments) {
         l += seg.length;
     }
     return l;
 }
 
-- (BBQuadBezierSegment*)segmentAtIndex:(int)index
+- (BBCubicBezierSegment*)segmentAtIndex:(int)index
 {
     if(index < self.segmentCount) {
         return [self.segments objectAtIndex:index];
@@ -60,7 +60,7 @@
 
 - (void) addSegmentWithA:(SPPoint *)a b:(SPPoint *)b c:(SPPoint *)c d:(SPPoint *)d
 {
-    BBQuadBezierSegment *seg = [[BBQuadBezierSegment alloc] initWithA:a b:b c:c d:d resolution:self.resolution];
+    BBCubicBezierSegment *seg = [[BBCubicBezierSegment alloc] initWithA:a b:b c:c d:d resolution:self.resolution];
 
     NSMutableArray *array = [NSMutableArray arrayWithArray:self.segments];
     [array addObject:seg];
@@ -76,7 +76,7 @@
     float totalLength = self.length;
     float cummulativeLength = 0;
     
-    for (BBQuadBezierSegment *seg in self.segments) {
+    for (BBCubicBezierSegment *seg in self.segments) {
         cummulativeLength += seg.length;
         float ratio = cummulativeLength / totalLength;
         [ratios addObject:[NSNumber numberWithFloat:ratio]];
@@ -90,7 +90,7 @@
     UIBezierPath *path = [UIBezierPath bezierPath];
 
     int index = 0;
-    for (BBQuadBezierSegment *seg in self.segments) {
+    for (BBCubicBezierSegment *seg in self.segments) {
 
         if(index == 0) {
             [path moveToPoint:CGPointMake(seg.a.x, seg.a.y)];
@@ -110,7 +110,7 @@
 {
     int segIndex = [self getSegmentIndexAtTime:u];
     float newT = [self scaleTime:u forSegment:segIndex];
-    BBQuadBezierSegment *seg = [self.segments objectAtIndex:segIndex];
+    BBCubicBezierSegment *seg = [self.segments objectAtIndex:segIndex];
     return [seg mx:newT];
 }
 
@@ -118,7 +118,7 @@
 {
     int segIndex = [self getSegmentIndexAtTime:u];
     float newT = [self scaleTime:u forSegment:segIndex];
-    BBQuadBezierSegment *seg = [self.segments objectAtIndex:segIndex];
+    BBCubicBezierSegment *seg = [self.segments objectAtIndex:segIndex];
     return [seg my:newT];
 }
 
@@ -126,7 +126,7 @@
 {
     int segIndex = [self getSegmentIndexAtTime:t];
     float newT = [self scaleTime:t forSegment:segIndex];
-    BBQuadBezierSegment *seg = [self.segments objectAtIndex:segIndex];
+    BBCubicBezierSegment *seg = [self.segments objectAtIndex:segIndex];
     return [seg x:newT];
 }
 
@@ -134,7 +134,7 @@
 {
     int segIndex = [self getSegmentIndexAtTime:t];
     float newT = [self scaleTime:t forSegment:segIndex];
-    BBQuadBezierSegment *seg = [self.segments objectAtIndex:segIndex];
+    BBCubicBezierSegment *seg = [self.segments objectAtIndex:segIndex];
     return [seg y:newT];
 }
 
@@ -142,7 +142,7 @@
 {
     int segIndex = [self getSegmentIndexAtTime:t];
     float newT = [self scaleTime:t forSegment:segIndex];
-    BBQuadBezierSegment *seg = [self.segments objectAtIndex:segIndex];
+    BBCubicBezierSegment *seg = [self.segments objectAtIndex:segIndex];
     return [seg trad:newT];
 }
 
@@ -150,7 +150,7 @@
 {
     int segIndex = [self getSegmentIndexAtTime:u];
     float newT = [self scaleTime:u forSegment:segIndex];
-    BBQuadBezierSegment *seg = [self.segments objectAtIndex:segIndex];
+    BBCubicBezierSegment *seg = [self.segments objectAtIndex:segIndex];
     return [seg mx:newT];
 }
 
@@ -158,7 +158,7 @@
 {
     int segIndex = [self getSegmentIndexAtTime:u];
     float newT = [self scaleTime:u forSegment:segIndex];
-    BBQuadBezierSegment *seg = [self.segments objectAtIndex:segIndex];
+    BBCubicBezierSegment *seg = [self.segments objectAtIndex:segIndex];
     return [seg my:newT];
 }
 
@@ -166,7 +166,7 @@
 {
     int segIndex = [self getSegmentIndexAtTime:u];
     float newT = [self scaleTime:u forSegment:segIndex];
-    BBQuadBezierSegment *seg = [self.segments objectAtIndex:segIndex];
+    BBCubicBezierSegment *seg = [self.segments objectAtIndex:segIndex];
     return [seg tmrad:newT];
 }
 
@@ -225,7 +225,7 @@
     int max = self.segmentCount;
     NSString *comma = @",";
 
-    for (BBQuadBezierSegment *seg in self.segments) {
+    for (BBCubicBezierSegment *seg in self.segments) {
         [segmentStrings appendFormat:@"%@%@\n", [seg description], comma];
         i++;
         if(i == max-1) {
