@@ -3,6 +3,8 @@ SparrowQuadBezier
 
 Create a path from cubic bezier segments, tween objects along the path, including easing. For the [Sparrow Framework](http://gamua.com/sparrow/)
 
+You might be wondering why it's called SparrowQuadBezier when it should be SparrowCubicBezier. I miss-typed the curve name in the original project. Maybe I'll rename it someday, but I'm hestant since it'll break links to the url.
+
 Notable Features
 ----------------
 
