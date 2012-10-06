@@ -2,6 +2,8 @@
 //  BBQuadBezierSegment.h
 //  Bezier
 //
+//  Defines a bezier curve. http://en.wikipedia.org/wiki/B%C3%A9zier_curve
+//
 //  Created by Jon Beebe on 12/10/2.
 //  Copyright 2012 Jon Beebe. All Rights Reserved.
 //
@@ -18,7 +20,10 @@
 
 @interface BBQuadBezierSegment : NSObject
 
+/// The beginning point for the curve. Sometimes referred to as P0.
 @property (nonatomic, strong) SPPoint *a;
+
+/// The 
 @property (nonatomic, strong) SPPoint *b;
 @property (nonatomic, strong) SPPoint *c;
 @property (nonatomic, strong) SPPoint *d;
