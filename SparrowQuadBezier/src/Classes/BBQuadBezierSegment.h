@@ -5,7 +5,7 @@
 //  Created by Jon Beebe on 12/10/2.
 //  Copyright 2012 Jon Beebe. All Rights Reserved.
 //
-//  Based on https://gist.github.com/670236, which came from: http://gamedev.stackexchange.com/a/5427/20365
+//  Based on https://gist.github.com/670236 which came from: http://gamedev.stackexchange.com/a/5427/20365
 //  Other useful resources:
 //      http://www.planetclegg.com/projects/WarpingTextToSplines.html
 //      http://steve.hollasch.net/cgindex/curves/cbezarclen.html

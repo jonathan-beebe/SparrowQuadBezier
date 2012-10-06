@@ -17,6 +17,8 @@
 
 @interface BBQuadBezierSegment ()
 
+@property (nonatomic, strong) NSCache *cache;
+
 @property (nonatomic) int len;
 @property (nonatomic, readwrite) float length;
 @property (nonatomic, strong) NSArray *arcLengths;
@@ -37,6 +39,8 @@
         self.d = d;
 
         self.len = 500;
+
+        self.cache = [[NSCache alloc] init];
 
         NSMutableArray *arcLengths = [NSMutableArray arrayWithCapacity:self.len + 1];
         
@@ -68,16 +72,29 @@
 
 - (float) map:(float)u
 {
+
+    NSString *cacheKey = [NSString stringWithFormat:@"map.%f", u];
+    NSNumber *cached = [self.cache objectForKey:cacheKey];
+
+    if(cached != nil) {
+        return [cached floatValue];
+    }
+
     float targetLength = u * [[self.arcLengths objectAtIndex:self.len] floatValue];
 
     int index = [self.arcLengths indexNearestNotGreaterThanValue:[NSNumber numberWithFloat:targetLength]];
 
     float lengthBefore = [[self.arcLengths objectAtIndex:index] floatValue];
+    float value;
+    
     if (lengthBefore == targetLength) {
-        return index / self.len;
+        value = index / self.len;
     } else {
-        return (index + (targetLength - lengthBefore) / ([[self.arcLengths objectAtIndex:index] floatValue] + 1 - lengthBefore)) / self.len;
+        value = (index + (targetLength - lengthBefore) / ([[self.arcLengths objectAtIndex:index] floatValue] + 1 - lengthBefore)) / self.len;
     }
+
+    [self.cache setObject:[NSNumber numberWithFloat:value] forKey:cacheKey];
+    return value;
 }
 
 - (float) mx:(float)u
