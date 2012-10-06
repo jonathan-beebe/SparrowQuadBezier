@@ -49,7 +49,10 @@
 /// The type of loop. (Default: SPLoopTypeNone)
 @property (nonatomic, assign) SPLoopType loop;
 
+/// Do you want to update the angle of the target object based on the tangent of the curve?
 @property (nonatomic, assign) BOOL updateAngle;
+
+/// If updating the target's angle, this allows for a default offset to be applied throughout the animation.
 @property (nonatomic, assign) float angleOffset;
 
 @end

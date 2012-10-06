@@ -2,6 +2,9 @@
 //  BBCubicBezierPath.h
 //  Bezier
 //
+//  This class groups cubic bezier segments into a larger path. It's a rough-draft that works, but could certainly
+//  be extended and improved.
+//
 //  Created by Jon Beebe on 12/10/2.
 //  Copyright 2012 Jon Beebe. All Rights Reserved.
 //
